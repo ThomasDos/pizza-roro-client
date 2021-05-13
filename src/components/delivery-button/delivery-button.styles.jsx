@@ -3,9 +3,9 @@ import styled from "styled-components";
 const bgColorButton = (props) => {
   switch (props.btnType) {
     case "delivery":
-      return "#B97C00";
+      return "#fb8f2d";
     case "clickCollect":
-      return "#707070";
+      return "#f2433b";
 
     default:
       return "white";
