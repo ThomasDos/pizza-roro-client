@@ -9,6 +9,7 @@ import DiscountPage from "./pages/discout/discount.component";
 import ContactPage from "./pages/contact/contact.component";
 
 import "./App.css";
+import { CheckoutPage } from "./pages/checkout/checkout.component";
 function App() {
   return (
     <div className="App">
@@ -19,6 +20,7 @@ function App() {
         <Route component={SignInAndSignUpPage} exact path="/signin" />
         <Route component={ContactPage} exact path="/contact" />
         <Route component={DiscountPage} path="/discount" />
+        <Route component={CheckoutPage} path="/checkout" />
         {/* <Route
           render={() =>
             this.props.currentUser ? (

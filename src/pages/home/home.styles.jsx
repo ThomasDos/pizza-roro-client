@@ -1,5 +1,3 @@
 import styled from "styled-components";
 
-export const HomePageContainer = styled.div`
-  color: blue;
-`;
+export const HomePageContainer = styled.div``;

@@ -10,7 +10,8 @@ const logoStyles = css`
 
 export const DeliveryWrapperContainer = styled.div`
   /* background: lightgreen; */
-  width: 100%;
+  margin: auto;
+  width: 80%;
   color: white;
   height: 5rem;
   display: flex;
