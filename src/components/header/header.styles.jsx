@@ -16,8 +16,9 @@ const logoNavbarStyles = css`
 `;
 
 export const HeaderContainer = styled.header`
-  max-width: 100%;
-  width: 100%;
+  margin: auto;
+  max-width: 90%;
+  width: 90%;
   height: 12vh;
   display: flex;
   justify-content: space-between;
