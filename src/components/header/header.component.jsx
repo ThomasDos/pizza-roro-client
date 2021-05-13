@@ -6,20 +6,42 @@ import {
   RightHeaderContainer,
   LogoWrapperContainer,
   LogoContainer,
+  NavItemsContainer,
+  MenuContainer,
+  DiscountContainer,
+  CartContainer,
+  LoginContainer,
+  TitleContainer,
 } from "./header.styles";
 
 export class Header extends Component {
   render() {
     return (
       <HeaderContainer>
-        <LeftHeaderContainer>
-          <LogoWrapperContainer to="/">
+        <LeftHeaderContainer to="/">
+          <LogoWrapperContainer>
             <LogoContainer classname="logo" />
           </LogoWrapperContainer>
-          + TITLE
+          <TitleContainer>
+            <p>Roro </p>
+            <p> Pizza</p>
+          </TitleContainer>
         </LeftHeaderContainer>
 
-        <RightHeaderContainer>NAV TEST</RightHeaderContainer>
+        <RightHeaderContainer>
+          <NavItemsContainer to="/menu">
+            <MenuContainer />
+          </NavItemsContainer>
+          <NavItemsContainer to="/discount">
+            <DiscountContainer />
+          </NavItemsContainer>
+          <NavItemsContainer to="">
+            <CartContainer />
+          </NavItemsContainer>
+          <NavItemsContainer to="/signin">
+            <LoginContainer />
+          </NavItemsContainer>
+        </RightHeaderContainer>
       </HeaderContainer>
     );
   }
