@@ -1,11 +1,18 @@
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { ReactComponent as Logo } from "../../assets/pizza.svg";
 import { ReactComponent as Menu } from "../../assets/menu.svg";
 import { ReactComponent as Discount } from "../../assets/price-tag.svg";
 import { ReactComponent as Cart } from "../../assets/grocery-cart.svg";
 import { ReactComponent as Login } from "../../assets/user.svg";
+import { CartDrowdown } from "./../cart-dropdown/cart-dropdown.component";
+
+const logoNavbarStyles = css`
+  width: 2rem;
+  height: 2rem;
+  margin: 0 0.1rem;
+`;
 
 export const HeaderContainer = styled.header`
   max-width: 100%;
@@ -49,12 +56,18 @@ export const TitleContainer = styled.div`
 
 export const NavItemsContainer = styled(Link)`
   svg {
-    width: 2rem;
-    height: 2rem;
-    margin: 0 0.1rem;
+    ${logoNavbarStyles}
+  }
+`;
+
+export const CartWrapperContainer = styled.div`
+  position: relative;
+  svg {
+    ${logoNavbarStyles}
   }
 `;
 export const MenuContainer = styled(Menu)``;
 export const DiscountContainer = styled(Discount)``;
 export const CartContainer = styled(Cart)``;
 export const LoginContainer = styled(Login)``;
+export const CartDropdownContainer = styled(CartDrowdown)``;

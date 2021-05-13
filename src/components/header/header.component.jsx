@@ -1,4 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+
+import { selectCartHidden } from "./../../app/redux/cart/cart.selectors";
+import { toggleCartHidden } from "./../../app/redux/cart/cart.actions";
 
 import {
   HeaderContainer,
@@ -12,39 +17,49 @@ import {
   CartContainer,
   LoginContainer,
   TitleContainer,
+  CartWrapperContainer,
+  CartDropdownContainer,
 } from "./header.styles";
 
-export class Header extends Component {
-  render() {
-    return (
-      <HeaderContainer>
-        <LeftHeaderContainer to="/">
-          <LogoWrapperContainer>
-            <LogoContainer classname="logo" />
-          </LogoWrapperContainer>
-          <TitleContainer>
-            <p>Roro </p>
-            <p> Pizza</p>
-          </TitleContainer>
-        </LeftHeaderContainer>
+const Header = ({ hidden, toggleHidden }) => {
+  return (
+    <HeaderContainer>
+      <LeftHeaderContainer to="/">
+        <LogoWrapperContainer>
+          <LogoContainer classname="logo" />
+        </LogoWrapperContainer>
+        <TitleContainer>
+          <p>Roro </p>
+          <p> Pizza</p>
+        </TitleContainer>
+      </LeftHeaderContainer>
 
-        <RightHeaderContainer>
-          <NavItemsContainer to="/menu">
-            <MenuContainer />
-          </NavItemsContainer>
-          <NavItemsContainer to="/discount">
-            <DiscountContainer />
-          </NavItemsContainer>
-          <NavItemsContainer to="">
-            <CartContainer />
-          </NavItemsContainer>
-          <NavItemsContainer to="/signin">
-            <LoginContainer />
-          </NavItemsContainer>
-        </RightHeaderContainer>
-      </HeaderContainer>
-    );
-  }
-}
+      <RightHeaderContainer>
+        <NavItemsContainer to="/menu">
+          <MenuContainer />
+        </NavItemsContainer>
+        <NavItemsContainer to="/discount">
+          <DiscountContainer />
+        </NavItemsContainer>
+        <CartWrapperContainer onClick={() => toggleHidden()}>
+          {hidden ? <CartDropdownContainer /> : null}
 
-export default Header;
+          <CartContainer />
+        </CartWrapperContainer>
+        <NavItemsContainer to="/signin">
+          <LoginContainer />
+        </NavItemsContainer>
+      </RightHeaderContainer>
+    </HeaderContainer>
+  );
+};
+
+const mapStateToProps = createStructuredSelector({
+  hidden: selectCartHidden,
+});
+
+const mapDispatchtoProps = (dispatch) => ({
+  toggleHidden: () => dispatch(toggleCartHidden()),
+});
+
+export default connect(mapStateToProps, mapDispatchtoProps)(Header);
