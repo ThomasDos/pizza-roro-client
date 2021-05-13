@@ -1,14 +1,35 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 
-import { Header } from "./components/header/header.component";
+import Header from "./components/header/header.component";
+import HomePage from "./pages/home/home.component";
+import MenuPage from "./pages/menu/menu.component";
+import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
 
 import "./App.css";
 function App() {
+  //   componentDidMount() {
+
+  // }
+
   return (
     <div className="App">
       <Header />
-      <Switch></Switch>
+      <Switch>
+        <Route component={HomePage} exact path="/" />
+        <Route component={MenuPage} path="/menu" />
+        {/* <Route
+          render={() =>
+            this.props.currentUser ? (
+              <Redirect to="/" />
+            ) : (
+              <SignInAndSignUpPage />
+            )
+          }
+          exact
+          path="/signin"
+        /> */}
+      </Switch>
     </div>
   );
 }
