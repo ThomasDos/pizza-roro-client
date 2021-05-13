@@ -6,11 +6,12 @@ import { ReactComponent as Menu } from "../../assets/menu.svg";
 import { ReactComponent as Discount } from "../../assets/price-tag.svg";
 import { ReactComponent as Cart } from "../../assets/grocery-cart.svg";
 import { ReactComponent as Login } from "../../assets/user.svg";
+import { ReactComponent as Contact } from "../../assets/earth-globe.svg";
 import { CartDrowdown } from "./../cart-dropdown/cart-dropdown.component";
 
 const logoNavbarStyles = css`
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   margin: 0 0.1rem;
 `;
 
@@ -41,13 +42,13 @@ export const LogoWrapperContainer = styled.div`
 `;
 
 export const LogoContainer = styled(Logo)`
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
 `;
 
 export const TitleContainer = styled.div`
   display: flex;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: bold;
   & p:last-child {
     color: brown;
@@ -70,4 +71,5 @@ export const MenuContainer = styled(Menu)``;
 export const DiscountContainer = styled(Discount)``;
 export const CartContainer = styled(Cart)``;
 export const LoginContainer = styled(Login)``;
+export const ContactContainer = styled(Contact)``;
 export const CartDropdownContainer = styled(CartDrowdown)``;

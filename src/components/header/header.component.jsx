@@ -19,6 +19,7 @@ import {
   TitleContainer,
   CartWrapperContainer,
   CartDropdownContainer,
+  ContactContainer,
 } from "./header.styles";
 
 const Header = ({ hidden, toggleHidden }) => {
@@ -41,6 +42,11 @@ const Header = ({ hidden, toggleHidden }) => {
         <NavItemsContainer to="/discount">
           <DiscountContainer />
         </NavItemsContainer>
+
+        <NavItemsContainer to="/contact">
+          <ContactContainer />
+        </NavItemsContainer>
+
         <CartWrapperContainer onClick={() => toggleHidden()}>
           {hidden ? <CartDropdownContainer /> : null}
 
