@@ -6,16 +6,17 @@ import { ReactComponent as Instagram } from "../../assets/instagram.svg";
 const socialMediaStyles = css`
   width: 1.4rem;
   height: 1.4rem;
-  margin: 0.2rem;
+  margin: 0.5rem;
 `;
 
 export const FooterContainer = styled.div`
   position: fixed;
-  bottom: 0;
+  bottom: 1rem;
   width: 100%;
-  height: 6rem;
-  padding: 1rem;
-  background: lightblue;
+  height: 4.5rem;
+  padding: 0.5rem;
+  background: #f2433b;
+  opacity: 90%;
   color: white;
   font-size: 0.7rem;
 `;
