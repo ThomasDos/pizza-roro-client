@@ -10,6 +10,7 @@ import ContactPage from "./pages/contact/contact.component";
 
 import "./App.css";
 import { CheckoutPage } from "./pages/checkout/checkout.component";
+import Footer from "./components/footer/footer.component";
 function App() {
   return (
     <div className="App">
@@ -33,6 +34,7 @@ function App() {
           path="/signin"
         /> */}
       </Switch>
+      <Footer />
     </div>
   );
 }

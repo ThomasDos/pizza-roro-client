@@ -48,7 +48,7 @@ const Header = ({ hidden, toggleHidden }) => {
         </NavItemsContainer>
 
         <CartWrapperContainer onClick={() => toggleHidden()}>
-          {hidden ? <CartDropdownContainer /> : null}
+          {hidden ? null : <CartDropdownContainer />}
 
           <CartContainer />
         </CartWrapperContainer>
