@@ -11,6 +11,7 @@ const bgColorButton = (props) => {
       return "white";
   }
 };
+export const TitleTestContainer = styled.h2``;
 
 export const DeliveryButtonContainer = styled.div`
   border-radius: 8%;

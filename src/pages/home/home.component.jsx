@@ -10,7 +10,7 @@ export class HomePage extends Component {
       <HomePageContainer>
         <DeliveryContainer />
         <CardBS />
-        <CarouselBS />
+        {/* <CarouselBS /> */}
       </HomePageContainer>
     );
   }
